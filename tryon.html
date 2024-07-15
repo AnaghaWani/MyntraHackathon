@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png"
+        href="https://raw.githubusercontent.com/ZeroOctave/ZeroOctave-Javascript-Projects/main/assets/Images/myntraclone/logo.png"/>
+
+    <link rel="stylesheet" href="tryon.css">
+    <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle - Myntra</title>
+</head>
+<body>
+    <nav>
+        <div class="left">
+            <img src="https://raw.githubusercontent.com/ZeroOctave/ZeroOctave-Javascript-Projects/main/assets/Images/myntraclone/logo.png" alt="">
+            <ul>
+                <li class="men">Men</li>
+                <li class="women">Women</li>
+                <li class="kids">Kids</li>
+                <li class="homeliving">Home&Living</li>
+                <li class="beauty">Beauty</li>
+                <li class="studio">Studio</li>
+                <li class="tryon">Try-on<sup style="color:red;">New</sup></li>
+            </ul>
+        </div>
+        <div class="right">
+            <input placeholder="Search for products, brands and more" class="desktop-searchBar" value=""
+                data-reactid="904">
+            <div class="icons">
+                <div class="profile">Profile</div>
+                <div class="wish">Wishlist</div>
+                <div class="bag">Bag</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tryon-container">
+        <div class="avatar-container">
+            <div class="avatar" id="avatar">
+                <img id="avatar-img" src="./assets/outfit1.jpg?text=Avatar" alt="Avatar">
+            </div>
+            <div class="actions">
+                <button class="action-button"><i class="fa fa-heart"></i> Save </button>
+                <button class="action-button"><i class="fa fa-magic"></i> Genie</button>
+                <button class="action-button"><i class="fa fa-shopping-cart"></i> Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeOutfit(outfit) {
+            const outfitImg = document.getElementById('avatar-img');
+            outfitImg.src = outfit;
+        }
+
+        // Preload outfit images
+        const outfits = [
+            './assets/outfit1.jpg','./assets/outfit2.jpg','./assets/outfit3.jpg','./assets/outfit4.jpg','./assets/outfit5.jpg'
+        ];
+        outfits.forEach(outfit => {
+            const img = new Image();
+            img.src = outfit;
+        });
+    </script>
+</body>
+</html>
